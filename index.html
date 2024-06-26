@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>WebCat</title>
+    <style>
+    input[type="button"]{
+      width:30.8px;
+      height:30.8px;
+      font-size:20.74px;
+      border-radius:50%;
+      }
+    </style>
+  </head>
+  <body>	
+	<input type="text" id="display" readonly style="width: 100%; height: 100px; font-size: 50px; border-bottom: 1px solid #ccc;">
+    <br>
+    <input id="1" value="1" type="button" onclick="appendValue('1')">
+    <input id="2" value="2" type="button" onclick="appendValue('2')">
+    <input id="3" value="3" type="button" onclick="appendValue('3')">
+    <input id="4" value="4" type="button" onclick="appendValue('4')">  
+    <input id="5" value="5" type="button" onclick="appendValue('5')">
+    <input id="6" value="6" type="button" onclick="appendValue('6')">
+    <input id="7" value="7" type="button" onclick="appendValue('7')">
+    <input id="8" value="8" type="button" onclick="appendValue('8')">
+    <input id="9" value="9" type="button" onclick="appendValue('9')">
+    <input id="0" value="0" type="button" onclick="appendValue('0')">
+    <input id="+" value="+" type="button" onclick="appendValue('+')">
+    <input id="-" value="-" type="button" onclick="appendValue('-')">
+    <input id="/" value="/" type="button" onclick="appendValue('/')">
+    <input id="." value="." type="button" onclick="appendValue('.')"> 
+    <input id="(" value="(" type="button" onclick="appendValue('(')">
+    <input id=")" value=")" type="button" onclick="appendValue(')')">
+    <input id="yˣ" value="yˣ" type="button" onclick="appendValue('^')">   
+    <input id="=" value="=" type="button" onclick="calculateResult()">
+    <input id="*" value="*" type="button" onclick="appendValue('*')">
+    <input id="π" value="π" type="button" onclick="appendValue('3.14159265358979323')">
+    <input id="C" value="C" type="button" onclick="clearDisplay()">
+    <input id="AC" value="AC" type="button" onclick="deleteLastChar()">
+    <script>
+    // 清空显示内容
+function clearDisplay() {
+    document.getElementById('display').value = "";
+}
+
+// 删除最后一个字符
+function deleteLastChar() {
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);
+}
+
+// 添加数值或符号到显示内容
+function appendValue(value) {
+    const display = document.getElementById('display');
+    display.value += value;
+}
+
+// 计算结果
+function calculateResult() {
+    try {
+        const expression = document.getElementById('display').value;
+        const result = eval(expression); // 使用eval函数来计算表达式
+        document.getElementById('display').value = result;
+    } catch (error) {
+        document.getElementById('display').value = "Error";
+    }
+}
+
+    </script>
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
